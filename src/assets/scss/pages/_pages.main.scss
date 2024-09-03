@@ -1,0 +1,26 @@
+@import "./ui-master-home.page.scss";
+@import "./landing.home.page.scss";
+@import "./create-card.page.scss";
+.mainSection {
+    padding: 20px 20px 50px;
+    &.headerExpand {
+        padding-top: 80px;
+    }
+}
+.bottomDropDown {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.filterForm{
+    &_autoCol {
+        flex: 1;
+        .control-group {
+            max-width: 100%;
+        }
+    }
+    &_smallCol {
+        min-width: 100px;
+        max-width: 100px;
+    }
+}

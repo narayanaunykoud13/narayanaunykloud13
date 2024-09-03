@@ -1,0 +1,227 @@
+body {
+    font-family: "Lexend Deca", sans-serif !important; background-color: #e1e2e3
+}
+
+@include generate-margin-padding-classes(m, margin);
+@include generate-margin-padding-classes(p, padding);
+
+a {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+
+    &-track {
+        background: #edf1ed;
+    }
+
+    &-thumb {
+        background: color(500);
+
+        &:hover {
+            background: color(500);
+        }
+    }
+}
+
+.ag-theme-alpine {
+    --ag-font-family: $fontFamily !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.ant-dropdown {
+    &-menu {
+        &-item {
+            .ant-dropdown-menu-title-content {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.mw-100 {
+    max-width: 100%;
+}
+
+.labelleft {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: inherit;
+
+    .control-label {
+        min-width: 150px;
+        font-size: 14px;
+    }
+}
+
+.customCollapse {
+    position: relative;
+
+    &_hide {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .ant-card {
+        margin: 0 0 20px 0;
+    }
+}
+
+.headerHoverBtn {
+    position: absolute;
+    transform: translate(-50%, 0);
+    transition: .3s;
+    top: 100%;
+    left: 50%;
+    padding: 0 30px 2px;
+    display: flex;
+    align-items: center;
+    border: 1px solid color(800);
+    border-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &:focus,
+    &:focus-visible {
+        outline: none
+    }
+}
+
+.header-strip-bottombar {
+    &:hover {
+        .headerHoverBtn {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.fs-14 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.fieldWithBg {
+    margin-bottom: 10px;
+
+    span {
+        margin-bottom: 5px;
+        display: block;
+    }
+}
+
+.mx-15 {
+    margin-inline: 15px;
+}
+
+.ant-btn {
+    font-family: "Lexend Deca", sans-serif !important;
+}
+
+.noFields {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.groupsMain {
+    border: 1px solid #f2f7ff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+    &_header {
+        background: #f2f7ff;
+        border-radius: 4px;
+        padding: 4px 8px;
+    }
+
+    &_body {
+        padding: 8px;
+    }
+}
+
+.heading {
+    background: black;
+    padding: 4px 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cardBoxMain{
+    margin: 15px;
+}
+.customCard {
+    margin: 0;
+    &:not(:last-child){
+        margin-bottom: 15px;
+    }
+    .ant-card-body{
+        padding: 10px;
+        padding-left: 35px;
+    }
+}
+.modalTable {
+    .ant-table-content {
+        overflow: auto;
+    }
+
+    table {
+        th {
+            white-space: nowrap;
+        }
+    }
+}
+
+.headerBottomBtn {
+    .header-strip {
+        & > .ant-flex {
+            flex-wrap: wrap;
+        }
+    }
+    .ant-tag {
+        border-radius: 20px;
+        font-weight: 400;
+    }
+}
+
+.navigation-menus{
+    li {
+        position: relative;
+        a{
+            z-index: 1;
+        }
+        .settingIcon{
+            position: absolute;right:20px;top:50%; transform: translateY(-50%);z-index: 2;background-color: transparent;
+            padding: 0;border: 0 ;
+            &:hover, &:focus{border: 0 !important; outline: none !important;}
+        }
+        &.active-tab{
+            .settingIcon{
+                color:#fff;
+            }
+        }
+    }
+}
+.select2Min{
+    min-width: 210px !important;
+}

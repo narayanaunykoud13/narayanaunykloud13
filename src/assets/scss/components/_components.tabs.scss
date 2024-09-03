@@ -1,0 +1,92 @@
+.commonTabs{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .ant-tabs {
+        font-family: "Lexend Deca", sans-serif !important;;
+        &-ink-bar{
+            &-animated{
+                background-color:color(500);
+            }
+        }
+        &-nav{
+            width: 100%;
+            margin-bottom: 0;
+            max-width: max-content;
+            background:transparent;
+            .ant-tabs-nav-operations {
+                display: none !important; 
+            }  
+        }    
+        &-extra-content{
+            .ant-dropdown-trigger{
+                padding: 0 14px;color: color(900);font-weight:300;display: flex;align-items: center;
+                &:hover{color: color(500);em{color: color(500);}}
+                em{font-size: 18px;}
+            }
+            .ant-dropdown{
+                &-menu{
+                    box-shadow: 0 0 4px 0px rgba($color: color(900), $alpha: 0.26);
+                    border-radius: 5px;
+                    padding: 0;
+                    &-item-group{
+                        &-title{
+                            padding: 10px 15px;
+                            line-height: 20px;
+                            color: color(900);
+                            font-weight:400;
+                            font-size:13px;
+                        }
+                    }
+                }
+            }
+        }        
+        &-tab{
+            padding-top: 0;
+            font-size: 13px;
+            font-family: "Lexend Deca", sans-serif !important;
+            font-weight: 500;
+            color: color(800);
+            padding-bottom: 6px;
+            &:hover {
+                color: color(800);
+            }
+            &.ant-tabs-tab-active {
+                .ant-tabs-tab-btn {
+                    color: color(900);
+                }
+            }
+        }
+    }
+    .filterBtn {
+        width: 37px;
+        min-width: 37px !important;
+        padding: 0;
+        border: 1px solid color(900);
+        height: 37px;
+        margin-left: 15px;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        span {
+            width: 16px; height: 16px;
+            svg {
+                width: 100%; height: 100%;
+            }
+        }
+        &:hover {
+            background-color: color(900) !important;
+            color: color(50) !important;
+            border-color: color(900) !important;
+        }
+        &-btnRight {
+            margin-left:auto;
+        }
+    }
+    &.tabFull {
+        .ant-tabs-nav {
+            max-width: 100%;
+        }
+    }
+}

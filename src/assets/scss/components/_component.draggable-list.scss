@@ -1,0 +1,72 @@
+
+.draggableList{
+    ul{
+        list-style: none;
+    }
+    em{
+        font-size: 16px;
+        margin-right: 10px;
+        color: #656f7d;
+        &:first-child{
+            color: #adb3bd;
+        }
+        &.icon-drag{
+            cursor: grab;
+        }
+    }
+    &_heading{
+        font-weight: 600;
+        font-size: 16px;
+        display: block;
+        &:not(:first-child){
+            margin-top: 10px;
+        }
+    }
+    &_title{
+        color: color(800); font-weight: 500; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+        padding-right: 5px;     
+        // width: 100px;  flex: 1;
+        width: 100%;
+    }
+    &_color{
+        width: 15px; height: 15px; border-radius: 3px;
+    }
+    &_item{
+        padding: 3px 10px;
+        border-radius: 10px;
+        &:hover{
+            background-color: #f5f5f5;
+        }
+        .ant-form-item{
+            margin: 0;
+        }
+        &_content{
+            width: 100%;
+        }
+        .anticon.anticon-edit {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .anticon.anticon-pushpin {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .icon-edit-alt, .icon-edit-alt-fill{
+            font-size: 20px; color: color(900) !important;
+            display: inline-flex; cursor: pointer;
+        }
+    }
+    &.groupList{
+        .dashSettingGrp_item{
+            padding: 8px 10px;
+            &:not(:last-child){
+                margin-bottom: 3px;
+            }
+        }
+    }
+    &-disabled{
+        .draggableList_item{
+            padding: 5px 20px;
+        }
+    }
+}

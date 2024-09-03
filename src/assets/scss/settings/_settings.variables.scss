@@ -1,0 +1,49 @@
+// color variables
+$colors: (
+  50: #ffffff,
+  60: #f5f5f5,
+  80: #FAFAFA,
+  100: #e0e0e0,
+  300: #5a5a5a,
+  400: #555555,
+  500: #10172B,
+  600: #08B3AB,
+  800: #212325,
+  850: #333333,
+  900: #000000,
+);
+
+
+@function color($color) {
+
+  // checking to see if our $theme-colors map has that $color key
+  @if map-has-key($colors, $color) {
+    // and if so, it will get that color for us in the map-get syntax
+    @return map-get($colors, $color);
+  }
+
+  // if not, it will give us a helpful error when we compile
+  @error "Unknown `#{$color}` in $colors.";
+  @return null;
+}
+
+$success:#00b69b;
+$danger :#dc4c64;
+$warning:#ffc107;
+$info   : #0dcaf0;
+$light  : #f8f9fa;
+
+
+$imageurl: "../images";
+$fonturl : "../fonts";
+$fontFamily: 'Lexend Deca',sans-serif;
+
+// fields height variable
+$field-height      :31px; // field height
+// $field-height-sm:25px;  // field height responsive sm
+// $field-height-lg:40px;  // field height responsive lg
+
+// fields padding variable
+$field-padding:12px 15px; //field padding
+// $field-padding-sm:10px;  //field height responsive xl
+// $field-padding-lg:6px 10px;  //field height responsive lg
